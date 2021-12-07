@@ -4,3 +4,9 @@
 .social-links i{
     color: var(--clr-light);
 }
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
