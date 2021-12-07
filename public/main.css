@@ -8,7 +8,7 @@
 
 :root{
     --bg-dark: #18181C;
-    --clr-dark: #EEE;
+    --clr-dark: #F8F9FA;
     --bg-light: #F8F9FA;
     --clr-light: #222;
 }
@@ -53,12 +53,19 @@ main{
     padding: 1rem;
     width: 400px;
 }
-
 .card img{
     height: 160px;
     width: 160px;
     background-image: cover;
     border-radius: 50%;
+}
+.card .toggle-dark{
+    align-self: flex-end;
+}
+.toggle-dark{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 .user-info{
     display: flex;
@@ -70,9 +77,15 @@ main{
     
     width: 80%;
 }
+
 .social-links{
     display: flex;
     gap: 1.5rem;
+}
+
+a{
+    color: var(--clr-light);
+    text-decoration: none;
 }
 
 .open-desc{

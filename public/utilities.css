@@ -1,12 +1,31 @@
+:root{
+    --bg-dark: #18181C;
+    --bgMain-dark: #26262c;
+    --clr-dark: #EEE;
+    --bg-light: #F8F9FA;
+    --clr-light: #222;
+}
+
 .shadow{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.social-links i{
-    color: var(--clr-light);
-}
+
 .hide{
     display: none;
 }
 .show{
     display: block;
+}
+
+.dark-mode{
+    color: var(--clr-dark);
+    background-color: var(--bg-dark);
+}
+.dark-mode-main{
+    color: var(--clr-dark);
+    background-color: var(--bgMain-dark);
+}
+.light-mode{
+    color: var(--clr-light);
+    background-color: var(--bg-light);
 }

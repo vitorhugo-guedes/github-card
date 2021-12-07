@@ -6,28 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Card</title>
     <link rel="stylesheet" href="/public/main.css">
-    <link rel="stylesheet" href="/public/styles.css">
+    <link rel="stylesheet" href="/public/utilities.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <main>
-        <section class="card-wrapper shadow">
+        <section id="wrapper" class="card-wrapper shadow">
             <div class="card">
+                <button id="toggle-dark" class="toggle-dark">
+                    <i id="toggle-dark-icon" class="fas fa-lightbulb fa-2x"></i>
+                </button>
                 <img id="profile-img" src="" alt="Foto Perfil">
                 <div class="user-info">
                     <h3 id="name"></h3>
                     <p id="bio"></p>
                 </div>
                 <div class="social-links">
-                    <a href=""><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href=""><i class="fab fa-github fa-2x"></i></a>
-                    <a href=""><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href=""><i id="link" class="fab fa-twitter fa-2x"></i></a>
+                    <a href=""><i id="link" class="fab fa-github fa-2x"></i></a>
+                    <a href=""><i id="link" class="fab fa-linkedin fa-2x"></i></a>
                 </div>
             </div>
-            <div class="desc">
+            <div id="openDesc" class="open-desc">
+                <span id="openDescIcon" class="hide"><i class="fas fa-caret-right fa-2x"></i></span>
+            </div>
+            <div id="desc" class="desc">
+                
             </div>
         </section>
     </main>
     <script src="/src/main.js" defer></script>
+    <script src="/src/script.js" defer></script>
 </body>
 </html>
