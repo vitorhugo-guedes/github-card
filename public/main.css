@@ -40,7 +40,7 @@ main{
 }
 
 .card, .desc, .open-desc{
-    height: 400px;
+    height: 450px;
 }
 .card{
     position: relative;
@@ -59,10 +59,14 @@ main{
     background-image: cover;
     border-radius: 50%;
 }
-.card .toggle-dark{
-    align-self: flex-end;
-}
+
 .toggle-dark{
+    position: absolute;
+    top: 0;
+    left: 340px;
+    right: 0;
+    bottom: 360px;
+
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -104,7 +108,7 @@ a{
 .desc{
     display: none;
     position: relative;
-    width: 500px;
+    width: 600px;
 }
 .desc::before, .open-desc::before{
     position: absolute;
