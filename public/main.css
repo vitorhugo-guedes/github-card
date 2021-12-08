@@ -79,10 +79,12 @@ main{
     right: 0;
     bottom: 360px;
 
-    cursor: pointer;
     border: none;
     color: var(--clr);
     background-color: transparent;
+}
+#toggle-dark-icon{
+    cursor: pointer;
 }
 .user-info{
     display: flex;
@@ -121,11 +123,40 @@ a{
 .desc{
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    
     width: 600px;
-
+    /* padding-left: 0.5rem; */
 }
+.slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 100%;
+    width: 100%;
+    background-color: lightslategray;
+}
+.slide-btns{
+    display: flex;
+    width: 100%;
+}
+.slide-btn{
+    cursor: pointer;
+
+    width: 100%;
+    border: none;
+    
+    color: var(--clr);
+    background-color: transparent;
+}
+#previous-img{
+    border-right: 1px solid var(--border);
+}
+
 .desc-btns{
     display: flex;
     flex-direction: column;
@@ -148,11 +179,10 @@ a{
     color: var(--clr);
     background-color: transparent;
 }
-.btn:hover{
+.btn:hover, .slide-btn:hover{
     background-color: var(--bg-btn-hover);
     transition: background 0.4s ease-out;
 }
-
 .btn:nth-child(1), .btn:nth-child(2){
     border-bottom: 1px solid var(--border);
 }

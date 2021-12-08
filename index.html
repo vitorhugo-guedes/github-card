@@ -16,28 +16,48 @@
                 <button title="Night Mode" aria-label="modo noturno" id="toggle-dark" class="toggle-dark">
                     <i aria-label="icone modo noturno" id="toggle-dark-icon" class="fas fa-lightbulb fa-2x"></i>
                 </button>
+
                 <img loading="lazy" id="profile-img" src="" alt="Foto de Perfil">
                 <div class="user-info">
                     <h3 id="name"></h3>
                     <p id="bio"></p>
                 </div>
+
                 <div class="social-links">
                     <a title="Twitter" href=""><i id="link" class="fab fa-twitter fa-2x"></i></a>
                     <a title="Github" href=""><i id="link" class="fab fa-github fa-2x"></i></a>
                     <a title="Linkedin" href=""><i id="link" class="fab fa-linkedin fa-2x"></i></a>
                 </div>
             </div>
+
             <div id="openDesc" class="open-desc">
                 <span id="openDescIcon" class="hide"><i class="fas fa-caret-right fa-2x"></i></span>
             </div>
+
             <div id="desc" class="desc hide">
-                <!-- <h4>Project name</h4> -->
-                <img src="" alt="" data-count="0">
-                <div class="desc-btns">
-                    <button class="btn" type="button"><i class="fas fa-external-link-square-alt fa-2x"></i></button>
-                    <button class="btn" type="button"><i class="fas fa-caret-left fa-2x"></i></button>
-                    <button class="btn" type="button"><i class="fas fa-folder fa-2x"></i></button>
+                <div class="slide">
+                    <div id="slide-img">
+                        <h4>Project name1</h4>
+                        <img src="" alt="">
+                    </div>
+                    <div id="slide-img" class="hide">
+                        <h4>Project name2</h4>
+                        <img src="" alt="">
+                    </div>
+                    <div id="slide-img" class="hide">
+                        <h4>Project name3</h4>
+                        <img src="" alt="">
+                    </div>
                 </div>
+                <div class="slide-btns">
+                    <button class="slide-btn" id="previous-img">Previous</button>
+                    <button class="slide-btn" id="next-img">Next</button>
+                </div>
+            </div>
+            <div class="desc-btns hide">
+                <button class="btn" type="button"><i class="fas fa-external-link-square-alt fa-2x"></i></button>
+                <button class="btn" id="close-desc" type="button"><i class="fas fa-caret-left fa-2x"></i></button>
+                <button class="btn" type="button"><i class="fas fa-folder fa-2x"></i></button>
             </div>
         </section>
     </main>

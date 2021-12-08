@@ -1,42 +1,46 @@
 const cardWrapper = document.querySelector('#wrapper');
+
 const openDescBtn = document.querySelector('#openDesc');
 const openDescIcon = document.querySelector('#openDescIcon');
+
 const desc = document.querySelector('#desc');
+const descBtns = document.querySelector('.desc-btns');
 
 const background = document.querySelector('main');
-// const socialLinks = document.querySelectorAll('#link');
-const darkModeBtn = document.querySelector('#toggle-dark');
-// const darkModeIcon = document.querySelector('#toggle-dark-icon');
+const darkModeBtn = document.querySelector('#toggle-dark-icon');
 
-let darkMode = localStorage.getItem('darkMode');
-
-// show aside button
+// show and hide aside button
 cardWrapper.addEventListener('mouseover', ()=>{
-    if(openDescBtn.classList.contains('open-desc-active')){
-        return
-    }else{
-        openDescBtn.classList.toggle('open-desc-active');
-        setInterval(openDescIcon.classList.remove('hide'), 5000);
-    }
+    openDescBtn.classList.add('open-desc-active');
+    openDescIcon.classList.remove('hide');
 })
 cardWrapper.addEventListener('mouseout', ()=>{
-    if(openDescBtn.classList.contains('open-desc-active')){
-        openDescBtn.classList.toggle('open-desc-active');
-        openDescIcon.classList.add('hide');
-    }
+    openDescBtn.classList.remove('open-desc-active');
+    openDescIcon.classList.add('hide');
 })
+// open description
 openDescBtn.addEventListener('click', ()=>{
-    desc.classList.toggle('hide');
-    if(!desc.classList.contains('hide')){
-        openDescBtn.classList.add('hide');
-    }
+    openDescBtn.classList.add('hide');
+    desc.classList.remove('hide');
+    descBtns.classList.remove('hide');
+})
+// close description
+const closeDescBtn = document.querySelector('#close-desc');
+
+closeDescBtn.addEventListener('click', ()=>{
+    desc.classList.add('hide');
+    descBtns.classList.add('hide');
+    openDescBtn.classList.remove('open-desc-active');
+    openDescBtn.classList.remove('hide');
 })
 
 // dark mode
+let darkMode = localStorage.getItem('darkMode');
+
 const addDarkMode = () =>{
     cardWrapper.classList.add('dark-mode');
     background.classList.add('dark-mode');
-
+    
     darkMode = localStorage.setItem('darkMode', 'enabled');
 }
 const removeDarkMode = ()=>{
@@ -56,10 +60,9 @@ darkModeBtn.addEventListener('click', () => {
         addDarkMode();
     else
         removeDarkMode();
-
 })
 
-
-
+// slide
+const images = document.querySelectorAll('#slide-img');
 
 
