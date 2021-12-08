@@ -7,10 +7,21 @@
 }
 
 :root{
-    --bg-dark: #18181C;
-    --clr-dark: #F8F9FA;
-    --bg-light: #F8F9FA;
-    --clr-light: #222;
+    --clr: #222;
+    --bg: #F8F9FA;
+    --bg-main: #fff;
+
+    --border: #d2d6da;
+    --bg-btn-hover: #DEE2E6;
+}
+
+.dark-mode{
+    --clr: #F8F9FA;
+    --bg: #18181C;
+    --bg-main: #26262c;
+    
+    --border: #2c2c2c;
+    --bg-btn-hover: #343A40;
 }
 
 html, body{
@@ -22,12 +33,13 @@ main{
     height: 100%;
     display: grid;
     place-items: center;
+    background-color: var(--bg-main);
 }
 
 .card-wrapper{
     display: flex;
-    color: var(--clr-light);
-    background-color: var(--bg-light);
+    color: var(--clr);
+    background-color: var(--bg);
 }
 
 .card-wrapper, .card{
@@ -69,6 +81,7 @@ main{
 
     cursor: pointer;
     border: none;
+    color: var(--clr);
     background-color: transparent;
 }
 .user-info{
@@ -88,7 +101,7 @@ main{
 }
 
 a{
-    color: var(--clr-light);
+    color: var(--clr);
     text-decoration: none;
 }
 
@@ -132,28 +145,28 @@ a{
     border: none;
     width: 100%;
 
-    /* color: var(--clr-light); */
+    color: var(--clr);
     background-color: transparent;
 }
 .btn:hover{
-    background-color: #333;
+    background-color: var(--bg-btn-hover);
     transition: background 0.4s ease-out;
 }
 
 .btn:nth-child(1), .btn:nth-child(2){
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid var(--border);
 }
-
 
 .desc::before, .open-desc::before{
     position: absolute;
     content: '';
-    top: 4px;
+    top: 10px;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 390px;
+
+    height: 430px;
     width: 1px;
-    opacity: 0.1;
-    background-color: var(--clr-light);
+    
+    background-color: var(--border);
 }

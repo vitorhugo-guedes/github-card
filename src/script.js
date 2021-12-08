@@ -4,9 +4,9 @@ const openDescIcon = document.querySelector('#openDescIcon');
 const desc = document.querySelector('#desc');
 
 const background = document.querySelector('main');
-const socialLinks = document.querySelectorAll('#link');
+// const socialLinks = document.querySelectorAll('#link');
 const darkModeBtn = document.querySelector('#toggle-dark');
-const darkModeIcon = document.querySelector('#toggle-dark-icon');
+// const darkModeIcon = document.querySelector('#toggle-dark-icon');
 
 let darkMode = localStorage.getItem('darkMode');
 
@@ -35,26 +35,14 @@ openDescBtn.addEventListener('click', ()=>{
 // dark mode
 const addDarkMode = () =>{
     cardWrapper.classList.add('dark-mode');
-    darkModeIcon.classList.add('dark-mode');
-    desc.classList.add('dark-mode');
+    background.classList.add('dark-mode');
 
-    socialLinks.forEach(link => {
-        link.classList.add('dark-mode');
-    })
-    background.classList.add('dark-mode-main');
-    
     darkMode = localStorage.setItem('darkMode', 'enabled');
 }
 const removeDarkMode = ()=>{
     cardWrapper.classList.remove('dark-mode');
-    darkModeIcon.classList.remove('dark-mode');
-    desc.classList.remove('dark-mode');
-
-    socialLinks.forEach(link => {
-        link.classList.remove('dark-mode');
-    })
-    background.classList.remove('dark-mode-main');
-
+    background.classList.remove('dark-mode');
+    
     darkMode = localStorage.setItem('darkMode', null);
 }
 
