@@ -26,8 +26,8 @@ cardWrapper.addEventListener('mouseout', ()=>{
     }
 })
 openDescBtn.addEventListener('click', ()=>{
-    desc.classList.toggle('show');
-    if(desc.classList.contains('show')){
+    desc.classList.toggle('hide');
+    if(!desc.classList.contains('hide')){
         openDescBtn.classList.add('hide');
     }
 })
@@ -36,6 +36,7 @@ openDescBtn.addEventListener('click', ()=>{
 const addDarkMode = () =>{
     cardWrapper.classList.add('dark-mode');
     darkModeIcon.classList.add('dark-mode');
+    desc.classList.add('dark-mode');
 
     socialLinks.forEach(link => {
         link.classList.add('dark-mode');
@@ -47,6 +48,7 @@ const addDarkMode = () =>{
 const removeDarkMode = ()=>{
     cardWrapper.classList.remove('dark-mode');
     darkModeIcon.classList.remove('dark-mode');
+    desc.classList.remove('dark-mode');
 
     socialLinks.forEach(link => {
         link.classList.remove('dark-mode');

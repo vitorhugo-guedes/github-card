@@ -34,12 +34,12 @@ main{
     border-bottom-left-radius: 7px;
     border-top-left-radius: 7px;
 }
-.card-wrapper, .desc{
+.card-wrapper, .desc, .desc-btns{
     border-bottom-right-radius: 7px;
     border-top-right-radius: 7px;
 }
 
-.card, .desc, .open-desc{
+.card, .desc, .open-desc, .desc-btns{
     height: 450px;
 }
 .card{
@@ -106,10 +106,45 @@ a{
 }
 
 .desc{
-    display: none;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 600px;
+
 }
+.desc-btns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 35px;
+    overflow: hidden;
+}
+.btn{
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    width: 100%;
+
+    /* color: var(--clr-light); */
+    background-color: transparent;
+}
+.btn:hover{
+    background-color: #333;
+    transition: background 0.4s ease-out;
+}
+
+.btn:nth-child(1), .btn:nth-child(2){
+    border-bottom: 1px solid #444;
+}
+
+
 .desc::before, .open-desc::before{
     position: absolute;
     content: '';
