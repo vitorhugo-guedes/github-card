@@ -64,5 +64,27 @@ darkModeBtn.addEventListener('click', () => {
 
 // slide
 const images = document.querySelectorAll('#slide-img');
+const nextImgBtn = document.querySelector('#next-img');
+const previousImgBtn = document.querySelector('#previous-img');
+let indexImg = 1;
 
+const nextImg = n => {
+    slideShow(indexImg += n)
+}
+const slideShow = num =>{
 
+    if(num < 1) indexImg = images.length
+    if(num > images.length) indexImg = 1
+
+    for(let i = 0; i < images.length; i++){
+        images[i].classList.add('hide');
+    }
+    images[indexImg - 1].classList.remove('hide');
+}
+
+nextImgBtn.addEventListener('click', () => {
+    nextImg(+1);
+})
+previousImgBtn.addEventListener('click', () => {
+    nextImg(-1);
+})
