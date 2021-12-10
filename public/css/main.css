@@ -13,6 +13,7 @@
 
     --border: #d2d6da;
     --bg-btn-hover: #DEE2E6;
+    --bg-overlay: #DEE2E6;
 }
 
 .dark-mode{
@@ -22,6 +23,7 @@
     
     --border: #2c2c2c;
     --bg-btn-hover: #343A40;
+    --bg-overlay: #222;
 }
 
 html, body{
@@ -104,7 +106,7 @@ main{
     gap: 1.5rem;
 }
 
-a{
+.social-links a{
     color: var(--clr);
     text-decoration: none;
 }
@@ -132,13 +134,18 @@ a{
     width: 600px;
 }
 .slide{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
     width: 100%;
-    height: 96%;
+    height: 94%;
+}
+.slide:hover .overlay{
+    z-index: 1;
+    opacity: 0.9;
 }
 .slide-img {
     height: 100%;
@@ -149,13 +156,26 @@ a{
     width: 100%;
     object-fit: cover;
 }
-.slide img:hover{
-    cursor: pointer;
+.overlay{
+    position: absolute;
+    inset: 0 0 0 0;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s ease;
+    background-color: var(--bg-overlay);
+}
+.overlay-text{
+    cursor: default;
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    font-size: 1.2rem;
+    color: var(--clr);
 }
 
 .slide-btns{
     display: flex;
-    height: 5%;
+    height: 6%;
     width: 100%;
 }
 .slide-btn{
@@ -172,13 +192,11 @@ a{
 }
 
 .desc-btns{
+    width: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
-    width: 35px;
-    /* overflow: hidden; */
 }
 .btn{
     cursor: pointer;
@@ -187,8 +205,10 @@ a{
     align-items: center;
     justify-content: center;
 
-    border: none;
     width: 100%;
+    border: none;
+    font-size: 13px;
+    text-decoration: none;
 
     color: var(--clr);
     background-color: transparent;
@@ -204,10 +224,7 @@ a{
 .desc::before, .open-desc::before{
     position: absolute;
     content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0 0 0 0;
 
     height: 450px;
     width: 1px;

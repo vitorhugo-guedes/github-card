@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Card</title>
-    <link rel="stylesheet" href="/public/main.css">
-    <link rel="stylesheet" href="/public/utilities.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/utilities.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -37,27 +37,33 @@
             <div id="desc" class="desc hide">
                 <div class="slide">
                     <div id="slide-img" class="slide-img">
-                        <img src="./public/assets/controlefinanceiro.png" alt="Controle financeiro">
+                        <img loading="lazy" src="./public/assets/controlefinanceiro.png" alt="Controle financeiro">
                         <div class="overlay">
-                            
+                            <h4 class="overlay-text">Controle Financeiro</h4>
                         </div>
                     </div>
                     <div id="slide-img" class="hide slide-img">
-                        <img src="public/assets/colorflipper.png" alt="">
+                        <img loading="lazy" src="public/assets/colorflipper.png" alt="Color flipper">
+                        <div class="overlay">
+                            <h4 class="overlay-text">Gerador de cores</h4>
+                        </div>
                     </div>
                     <div id="slide-img" class="hide slide-img">
-                        <img src="public/assets/texteditor.png" alt="">
+                        <img loading="lazy" src="public/assets/texteditor.png" alt="Editor de texto">
+                        <div class="overlay">
+                            <h4 class="overlay-text">Editor rich-text</h4>
+                        </div>
                     </div>
                 </div>
                 <div class="slide-btns">
-                    <button class="slide-btn" id="previous-img">Previous</button>
-                    <button class="slide-btn" id="next-img">Next</button>
+                    <button class="slide-btn" id="previous-img"><i class="fas fa-angle-double-left fa-2x"></i></button>
+                    <button class="slide-btn" id="next-img"><i class="fas fa-angle-double-right fa-2x"></i></button>
                 </div>
             </div>
             <div class="desc-btns hide">
-                <button class="btn" type="button"><i class="fas fa-external-link-square-alt fa-2x"></i></button>
-                <button class="btn" id="close-desc" type="button"><i class="fas fa-caret-left fa-2x"></i></button>
-                <button class="btn" type="button"><i class="fas fa-folder fa-2x"></i></button>
+                <a target="_blank" href="" class="btn" title="Site do projeto" id="proj-site" type="button"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
+                <button class="btn" title="Fechar" id="close-desc" type="button"><i class="fas fa-caret-left fa-2x"></i></button>
+                <a target="_blank" href="" class="btn" title="Repositório do projeto" id="proj-repo" type="button"><i class="fas fa-folder fa-2x"></i></a>
             </div>
         </section>
     </main>
