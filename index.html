@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Card</title>
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/utilities.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <main>
-        <section id="wrapper" class="card-wrapper shadow">
-            <div class="card">
+    <main class="grid-center">
+        <section id="wrapper" class="card-wrapper container-flex">
+            
+            <div id="card" class="card border-left border-right flex shadow">
+                
                 <button title="Night Mode" aria-label="modo noturno" id="toggle-dark" class="toggle-dark">
                     <i aria-label="icone modo noturno" id="toggle-dark-icon" class="fas fa-lightbulb fa-2x"></i>
                 </button>
 
-                <img loading="lazy" id="profile-img" src="" alt="Foto de Perfil">
-                <div class="user-info">
+                <img id="profile-img" src="" alt="Foto de Perfil">
+                <div class="user-info flex">
                     <h3 id="name"></h3>
                     <p id="bio"></p>
                 </div>
@@ -30,40 +33,48 @@
                 </div>
             </div>
 
-            <div id="openDesc" class="open-desc">
+            <div id="openDesc" class="open-desc border-right shadow">
                 <span id="openDescIcon" class="hide"><i class="fas fa-caret-right fa-2x"></i></span>
             </div>
 
-            <div id="desc" class="desc hide">
+            <div id="desc" class="desc hide shadow">
+
                 <div class="slide">
-                    <div id="slide-img" class="slide-img">
+
+                    <div id="slide-img" class="slide-img-wrapper">
                         <img loading="lazy" src="./assets/img/controlefinanceiro.png" alt="Controle financeiro">
                         <div class="overlay">
                             <h4 class="overlay-text">Controle Financeiro</h4>
                         </div>
                     </div>
-                    <div id="slide-img" class="hide slide-img">
+
+                    <div id="slide-img" class="hide slide-img-wrapper">
                         <img loading="lazy" src="./assets/img/colorflipper.png" alt="Color flipper">
                         <div class="overlay">
                             <h4 class="overlay-text">Gerador de cores</h4>
                         </div>
                     </div>
-                    <div id="slide-img" class="hide slide-img">
+
+                    <div id="slide-img" class="hide slide-img-wrapper">
                         <img loading="lazy" src="./assets/img/texteditor.png" alt="Editor de texto">
                         <div class="overlay">
                             <h4 class="overlay-text">Editor rich-text</h4>
                         </div>
                     </div>
+
                 </div>
                 <div class="slide-btns">
                     <button class="slide-btn" id="previous-img"><i class="fas fa-angle-double-left fa-2x"></i></button>
                     <button class="slide-btn" id="next-img"><i class="fas fa-angle-double-right fa-2x"></i></button>
                 </div>
             </div>
-            <div class="desc-btns hide">
-                <a target="_blank" href="" class="btn" title="Site do projeto" id="proj-site" type="button"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
-                <button class="btn" title="Fechar" id="close-desc" type="button"><i class="fas fa-caret-left fa-2x"></i></button>
-                <a target="_blank" href="" class="btn" title="Repositório do projeto" id="proj-repo" type="button"><i class="fas fa-folder fa-2x"></i></a>
+            
+            <div class="desc-btns hide shadow">
+                <a target="_blank" href="" class="btn flex" title="Site do projeto" id="proj-site" type="button"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
+                
+                <button class="btn flex" title="Fechar" id="close-desc" type="button"><i class="fas fa-caret-left fa-2x"></i></button>
+                
+                <a target="_blank" href="" class="btn flex" title="Repositório do projeto" id="proj-repo" type="button"><i class="fas fa-folder fa-2x"></i></a>
             </div>
         </section>
     </main>

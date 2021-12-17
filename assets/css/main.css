@@ -26,31 +26,24 @@
     --bg-overlay: #222;
 }
 
-html, body{
-    height: 100%;
+body{
+    /* overflow: hidden; */
     font-family: 'Inter', sans-serif;
 }
 
 main{
-    height: 100%;
-    display: grid;
-    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
     background-color: var(--bg-main);
 }
 
-.card-wrapper{
-    display: flex;
-    color: var(--clr);
-    background-color: var(--bg);
-}
 
-.card-wrapper, .card{
-    border-bottom-left-radius: 7px;
-    border-top-left-radius: 7px;
-}
-.card-wrapper, .desc-btns{
-    border-bottom-right-radius: 7px;
-    border-top-right-radius: 7px;
+.card-wrapper{
+    width: 100%;
+    justify-content: center;
+
+    background-color: var(--bg-main);
 }
 
 .card, .desc, .open-desc, .desc-btns{
@@ -58,83 +51,83 @@ main{
 }
 .card{
     position: relative;
-    display: flex;
+    grid-area: card;
+    
     gap: 1rem;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
-
-    padding: 1rem;
+    
     width: 400px;
+    padding: 1rem;
+    
+    color: var(--clr);
+    background-color: var(--bg);
 }
+
 .card img{
     height: 160px;
     width: 160px;
     background-image: cover;
     border-radius: 50%;
 }
-
-.toggle-dark{
-    cursor: default;
-    position: absolute;
-    top: 0;
-    left: 340px;
-    right: 0;
-    bottom: 360px;
-
-    border: none;
-    outline: none;
-    color: var(--clr);
-    background-color: transparent;
-}
-#toggle-dark-icon{
-    cursor: pointer;
-}
 .user-info{
-    display: flex;
+    width: 80%;
+
+    gap: 1rem;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 1rem;
+
     text-align: justify;
-    
-    width: 80%;
-}
-
-.social-links{
-    display: flex;
-    gap: 1.5rem;
-}
-
-.social-links a{
-    color: var(--clr);
-    text-decoration: none;
 }
 
 .open-desc{
     width: 0px;
     transition: width 0.5s;
+    
+    color: var(--clr);
+    background-color: var(--bg);
 }
 .open-desc-active{
     cursor: pointer;
-    width: 32px;
     position: relative;
+
+    width: 32px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
+@media screen and (max-width: 600px) {
+    .open-desc{
+        height: 0px;
+        width: 0px;
+        transition: height 0.5s;
+    }
+    .open-desc-active{
+        width: 400px;
+        height: 32px;
+    }
+}
+
 
 .desc{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    
+    grid-area: desc;
     width: 600px;
+    position: relative;
+
+    color: var(--clr);
+    background-color: var(--bg);
 }
+@media screen and (max-width: 600px) {
+    .desc{
+        width: 400px;
+
+    }
+}
+
 .slide{
     position: relative;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,7 +140,7 @@ main{
     z-index: 1;
     opacity: 0.9;
 }
-.slide-img {
+.slide-img-wrapper {
     height: 100%;
     width: 100%;
 }
@@ -156,27 +149,12 @@ main{
     width: 100%;
     object-fit: cover;
 }
-.overlay{
-    position: absolute;
-    inset: 0 0 0 0;
-    opacity: 0;
-    z-index: -1;
-    transition: 0.5s ease;
-    background-color: var(--bg-overlay);
-}
-.overlay-text{
-    cursor: default;
-    position: absolute;
-    top: 40%;
-    left: 37%;
-    font-size: 1.2rem;
-    color: var(--clr);
-}
 
 .slide-btns{
     display: flex;
     height: 6%;
     width: 100%;
+    grid-area: slideBtns;
 }
 .slide-btn{
     cursor: pointer;
@@ -193,32 +171,23 @@ main{
 
 .desc-btns{
     width: 35px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
-.btn{
-    cursor: pointer;
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: center;
 
-    width: 100%;
-    border: none;
-    font-size: 13px;
-    text-decoration: none;
-
-    color: var(--clr);
-    background-color: transparent;
-}
-.btn:hover, .slide-btn:hover{
-    background-color: var(--bg-btn-hover);
-    transition: background 0.4s ease-out;
-}
-.btn:nth-child(1), .btn:nth-child(2){
-    border-bottom: 1px solid var(--border);
+@media screen and (max-width: 600px) {
+    .desc-btns{
+        grid-area: descBtns;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+    }
+    .desc::before, .open-desc::before{
+        display: none;
+    }
 }
 
 .desc::before, .open-desc::before{

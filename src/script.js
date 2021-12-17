@@ -1,4 +1,5 @@
 const cardWrapper = document.querySelector('#wrapper');
+const card = document.querySelector('#card');
 
 const openDescBtn = document.querySelector('#openDesc');
 const openDescIcon = document.querySelector('#openDescIcon');
@@ -13,10 +14,12 @@ const darkModeBtn = document.querySelector('#toggle-dark-icon');
 cardWrapper.addEventListener('mouseover', ()=>{
     openDescBtn.classList.add('open-desc-active');
     openDescIcon.classList.remove('hide');
+    card.classList.remove('border-right');
 })
 cardWrapper.addEventListener('mouseout', ()=>{
     openDescBtn.classList.remove('open-desc-active');
     openDescIcon.classList.add('hide');
+    card.classList.add('border-right');
 })
 // open description
 openDescBtn.addEventListener('click', ()=>{
