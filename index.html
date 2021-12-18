@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="./assets/css/utilities.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <main class="grid-center">
+<body class="grid-center">
+    <!-- <main class="grid-center"> -->
         <section id="wrapper" class="card-wrapper container-flex">
             
-            <div id="card" class="card border-left border-right flex shadow">
+            <div id="card" class="card border-radius-all shadow flex">
                 
                 <button title="Night Mode" aria-label="modo noturno" id="toggle-dark" class="toggle-dark">
                     <i aria-label="icone modo noturno" id="toggle-dark-icon" class="fas fa-lightbulb fa-2x"></i>
@@ -33,11 +33,11 @@
                 </div>
             </div>
 
-            <div id="openDesc" class="open-desc border-right shadow">
-                <span id="openDescIcon" class="hide"><i class="fas fa-caret-right fa-2x"></i></span>
+            <div id="openDesc" class="open-desc">
+                <span id="openDescIcon" class="open-desc-icon hide"><i class="fas fa-caret-right fa-2x"></i></span>
             </div>
 
-            <div id="desc" class="desc hide shadow">
+            <div id="desc" class="desc hide">
 
                 <div class="slide">
 
@@ -69,15 +69,15 @@
                 </div>
             </div>
             
-            <div class="desc-btns hide shadow">
+            <div class="desc-btns hide">
                 <a target="_blank" href="" class="btn flex" title="Site do projeto" id="proj-site" type="button"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
                 
-                <button class="btn flex" title="Fechar" id="close-desc" type="button"><i class="fas fa-caret-left fa-2x"></i></button>
+                <button class="btn flex" title="Fechar" id="close-desc" type="button"><i class="close-desc-icon fas fa-caret-left fa-2x"></i></button>
                 
                 <a target="_blank" href="" class="btn flex" title="Repositório do projeto" id="proj-repo" type="button"><i class="fas fa-folder fa-2x"></i></a>
             </div>
         </section>
-    </main>
+    <!-- </main> -->
     <script src="/src/main.js" defer></script>
     <script src="/src/script.js" defer></script>
 </body>
