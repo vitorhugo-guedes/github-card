@@ -46,9 +46,9 @@ O projeto é um card que possui dark mode salvo no localStorage e uma parte a ma
 
 ## Tecnologias
 
-- HTML :white_heart:
-- Css :blue_heart:
-- Javascript :yellow_heart:
+:white_heart: HTML
+:blue_heart: Css
+:yellow_heart: Javascript
 
 <br>
 
