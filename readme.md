@@ -27,7 +27,7 @@ Treinar consumo de apis e programação assícrona usando o endpoint do perfil d
 <br>
 
 ## Descrição
-O projeto é um card que possui dark mode salvo no localStorage e uma parte a mais, mostrando alguns projetos que fiz com links para o repositório e para onde está hospedado o projeto.
+O projeto é um card que possui dark mode salvo no localStorage e uma parte a mais, mostrando alguns projetos que fiz, com links para o repositório e para onde está hospedado o projeto.
 
 <br>
 
@@ -46,9 +46,9 @@ O projeto é um card que possui dark mode salvo no localStorage e uma parte a ma
 
 ## Tecnologias
 
-- HTML
-- Css
-- Javascript
+- HTML :white_heart:
+- Css :blue_heart:
+- Javascript :yellow_heart:
 
 <br>
 
