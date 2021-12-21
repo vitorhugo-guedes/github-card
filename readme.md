@@ -6,8 +6,8 @@
 
 <br>
 
-### :pencil: Quer usar ou me ajudar a incluir funcionalidades? 
-<h4>Acesse o site e teste por <a></a></h4>
+### :pencil: Confira aqui !!! 
+<h4>Acesse <a>https://vitordevcard.vercel.app/</a></h4>
 
 <br>
 
@@ -21,7 +21,7 @@
 
 <br>
 
-## Objetivo <i>:dart:</i>
+## Objetivo
 Treinar consumo de apis e programação assícrona usando o endpoint do perfil do github.
 
 <br>
