@@ -6,8 +6,8 @@
 
 <br>
 
-### :pencil: Confira aqui !!! 
-<h4>Acesse <a>https://vitordevcard.vercel.app/</a></h4>
+### :pencil: Confira o projeto !!! 
+<h4>Acesse: <a href="https://vitordevcard.vercel.app">https://vitordevcard.vercel.app</a></h4>
 
 <br>
 
@@ -32,7 +32,9 @@ O projeto é um card que possui dark mode salvo no localStorage e uma parte a ma
 <br>
 
 <!-- Imagens -->
-
+![cardimage1](https://user-images.githubusercontent.com/67174283/146991914-679d3e7b-bc7a-46aa-b5cf-c82128459ca4.png)
+![cardimagelight](https://user-images.githubusercontent.com/67174283/146991968-360b85d5-460a-4b34-95d1-58fdf53dbec3.PNG)
+![cardimage3](https://user-images.githubusercontent.com/67174283/146991952-e222b413-3c77-40e7-89a2-f57b297172b9.png)
 
 <br>
 
@@ -42,15 +44,15 @@ O projeto é um card que possui dark mode salvo no localStorage e uma parte a ma
 - [x] Dark/Light Mode
 - [ ] Animações
 
-<br>
 
 ## Tecnologias
 
 :white_heart: HTML
+<br>
 :blue_heart: Css
+<br>
 :yellow_heart: Javascript
 
-<br>
 
 ## Autor
 Feito por Vitor Guedes :heart: entre em contato:
