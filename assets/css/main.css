@@ -82,6 +82,17 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.desc::before, .open-desc::before{
+    position: absolute;
+    content: '';
+    inset: 0 0 0 0;
+    
+    height: 450px;
+    width: 1px;
+    
+    background-color: var(--border);
+}
 @media screen and (max-width: 600px) {
     .card{
         width: var(--wdt-mobile);
@@ -98,19 +109,17 @@ body{
     .open-desc-icon{
         transform: rotate(90deg);
     }
+    .desc::before, .open-desc::before{
+        position: absolute;
+        content: '';
+        inset: 0 0 0 0;
+        
+        height: 1px;
+        width: 100%;
+        
+        background-color: var(--border);
+    }
 }
-
-.desc::before, .open-desc::before{
-    position: absolute;
-    content: '';
-    inset: 0 0 0 0;
-
-    height: 450px;
-    width: 1px;
-    
-    background-color: var(--border);
-}
-
 .desc{
     position: relative;
     width: 600px;
@@ -132,13 +141,24 @@ body{
         width: var(--wdt-mobile);
     }
     .desc-btns{
-        grid-area: descBtns;
+        position: relative;
+
         height: 35px;
         width: 100%;
+
         flex-direction: row;
+        grid-area: descBtns;
     }
-    .desc::before, .open-desc::before{
-        display: none;
+    
+    .desc-btns::before{
+        position: absolute;
+        content: '';
+        inset: 0 0 0 0;
+
+        height: 1px;
+        width: 100%;
+
+        background-color: var(--border);
     }
     .close-desc-icon{
         transform: rotate(90deg);

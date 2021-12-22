@@ -14,11 +14,6 @@
 #toggle-dark-icon{
     cursor: pointer;
 }
-@media screen and (max-width: 600px) {
-    .toggle-dark{
-        inset: 0 0 360px 320px;
-    }
-}
 
 .user-info{
     width: 80%;
@@ -26,7 +21,7 @@
     gap: 1rem;
     flex-direction: column;
     justify-content: center;
-
+    
     text-align: justify;
 }
 
@@ -45,11 +40,11 @@
     width: 100%;
     height: 100%;
     justify-content: center;
-
+    
     border: none;
     font-size: 13px;
     text-decoration: none;
-
+    
     color: var(--clr);
     background-color: var(--bg);
 }
@@ -76,4 +71,14 @@
     left: 37%;
     font-size: 1.2rem;
     color: var(--clr);
+}
+
+@media screen and (max-width: 600px) {
+    .toggle-dark{
+        inset: 0 0 360px 320px;
+    }
+    .btn:nth-child(1), .btn:nth-child(2){
+        border-bottom: none;
+        border-right: 1px solid var(--border);
+    }
 }

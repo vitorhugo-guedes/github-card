@@ -1,12 +1,9 @@
 const cardWrapper = document.querySelector('#wrapper');
 const card = document.querySelector('#card');
-
 const openDescBtn = document.querySelector('#openDesc');
 const openDescIcon = document.querySelector('#openDescIcon');
-
 const desc = document.querySelector('#desc');
 const descBtns = document.querySelector('.desc-btns');
-
 const background = document.querySelector('body');
 const darkModeBtn = document.querySelector('#toggle-dark-icon');
 
@@ -24,7 +21,11 @@ const removeClass = (cssClass, ...elements) => {
 }
 
 // show aside button
-cardWrapper.addEventListener('mouseover', ()=>{
+card.addEventListener('mouseover', ()=>{
+    addClass('open-desc-active', openDescBtn);
+    removeClass('hide', openDescIcon);
+})
+openDescBtn.addEventListener('mouseover', ()=>{
     addClass('open-desc-active', openDescBtn);
     removeClass('hide', openDescIcon);
 })
@@ -78,18 +79,18 @@ const nextImgBtn = document.querySelector('#next-img');
 const previousImgBtn = document.querySelector('#previous-img');
 let indexImg = 1;
 
-const nextImg = n => {
-    slideShow(indexImg += n)
-}
 const slideShow = num =>{
-
     if(num < 1) indexImg = images.length
     if(num > images.length) indexImg = 1
-
+    
     for(let i = 0; i < images.length; i++){
         images[i].classList.add('hide');
     }
     images[indexImg - 1].classList.remove('hide');
+}
+
+const nextImg = n => {
+    slideShow(indexImg += n)
 }
 
 nextImgBtn.addEventListener('click', () => {
