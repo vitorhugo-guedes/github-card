@@ -44,7 +44,7 @@ openDescBtn.addEventListener('click', ()=>{
 const closeDescBtn = document.querySelector('#close-desc');
 
 closeDescBtn.addEventListener('click', ()=>{
-    let hideElements = [desc, descBtns, openDescIcon]
+    let hideElements = [desc, descBtns, openDescIcon];
     addClass('hide', ...hideElements);
 
     removeClass('hide', openDescBtn);

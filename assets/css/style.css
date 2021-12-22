@@ -64,6 +64,10 @@
     transition: 0.5s ease;
     background-color: var(--bg-overlay);
 }
+.slide:hover .overlay{
+    z-index: 1;
+    opacity: 0.9;
+}
 .overlay-text{
     cursor: default;
     position: absolute;
