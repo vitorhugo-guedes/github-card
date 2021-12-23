@@ -52,6 +52,12 @@
     background-color: var(--bg-btn-hover);
     transition: background 0.4s ease-out;
 }
+.btn:nth-child(1){
+    border-top-right-radius: 7px;
+}
+.btn:nth-child(3){
+    border-bottom-right-radius: 7px;
+}
 .btn:nth-child(1), .btn:nth-child(2){
     border-bottom: 1px solid var(--border);
 }

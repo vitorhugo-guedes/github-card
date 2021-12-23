@@ -3,7 +3,6 @@
     --wdt-mobile: 360px;
     --wdt-desc-default: 600px;
 }
-
 .border-radius-left{
     border-bottom-left-radius: 7px;
     border-top-left-radius: 7px;
@@ -20,14 +19,17 @@
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
 }
-.border-radius-all{
+/* .border-radius-all{
     border-radius: 7px;
-}
+} */
 .shadow{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, 
                 rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-
+/* box-shadow: 0 4px 2px -2px gray; */
+.shadow-bottom{
+    box-shadow: 0 4px 3px -3px gray;
+}
 .hide{
     display: none;
 }

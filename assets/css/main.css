@@ -8,7 +8,7 @@
 :root{
     --clr: #222;
     --bg: #F8F9FA;
-    --bg-main: #eee;
+    --bg-main: #ddd;
 
     --border: #d2d6da;
     --bg-btn-hover: #DEE2E6;
@@ -125,19 +125,24 @@ body{
 .desc{
     position: relative;
     grid-area: desc;
+
     width: var(--wdt-desc-default);
 
     color: var(--clr);
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
 }
 .desc-btns{
     width: 35px;
-    
+
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
+
 @media screen and (max-width: 600px) {
     .desc{
         width: var(--wdt-mobile);
@@ -182,6 +187,7 @@ body{
 .slide-img-wrapper {
     height: 100%;
     width: 100%;
+    z-index: 2;
 }
 .slide img {
     height: 100%;

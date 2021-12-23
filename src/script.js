@@ -1,9 +1,12 @@
 const cardWrapper = document.querySelector('#wrapper');
 const card = document.querySelector('#card');
+
 const openDescBtn = document.querySelector('#openDesc');
 const openDescIcon = document.querySelector('#openDescIcon');
+
 const desc = document.querySelector('#desc');
 const descBtns = document.querySelector('.desc-btns');
+
 const background = document.querySelector('body');
 const darkModeBtn = document.querySelector('#toggle-dark-icon');
 
@@ -24,15 +27,29 @@ const removeClass = (cssClass, ...elements) => {
 card.addEventListener('mouseover', ()=>{
     addClass('open-desc-active', openDescBtn);
     removeClass('hide', openDescIcon);
+
+    removeClass('border-radius-right', card);
 })
 openDescBtn.addEventListener('mouseover', ()=>{
     addClass('open-desc-active', openDescBtn);
     removeClass('hide', openDescIcon);
+
+    removeClass('border-radius-right', card);
 })
 // hide aside button
-cardWrapper.addEventListener('mouseout', ()=>{
+card.addEventListener('mouseout', ()=>{
     addClass('hide', openDescIcon);
     removeClass('open-desc-active', openDescBtn);
+
+    if(desc.classList.contains('hide'))
+        addClass('border-radius-right', card);
+})
+openDescBtn.addEventListener('mouseout', ()=>{
+    addClass('hide', openDescIcon);
+    removeClass('open-desc-active', openDescBtn);
+    
+    if(desc.classList.contains('hide'))
+        addClass('border-radius-right', card);
 })
 
 // open description

@@ -14,7 +14,7 @@
     <!-- <main class="grid-center"> -->
         <section id="wrapper" class="card-wrapper container-flex">
             
-            <div id="card" class="card border-radius-all shadow flex">
+            <div id="card" class="card shadow flex border-radius-left border-radius-right">
                 
                 <button title="Night Mode" aria-label="modo noturno" id="toggle-dark" class="toggle-dark">
                     <i aria-label="icone modo noturno" id="toggle-dark-icon" class="fas fa-lightbulb fa-2x"></i>
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <div id="openDesc" class="open-desc">
+            <div id="openDesc" class="open-desc border-radius-right">
                 <span id="openDescIcon" class="open-desc-icon hide"><i class="fas fa-caret-right fa-2x"></i></span>
             </div>
 
@@ -63,13 +63,13 @@
                     </div>
 
                 </div>
-                <div class="slide-btns">
+                <div class="slide-btns shadow-bottom">
                     <button class="slide-btn" id="previous-img"><i class="fas fa-angle-double-left fa-2x"></i></button>
                     <button class="slide-btn" id="next-img"><i class="fas fa-angle-double-right fa-2x"></i></button>
                 </div>
             </div>
             
-            <div class="desc-btns hide">
+            <div class="desc-btns shadow-bottom hide">
                 <a target="_blank" href="" class="btn flex" title="Site do projeto" id="proj-site" type="button"><i class="fas fa-external-link-square-alt fa-2x"></i></a>
                 
                 <button class="btn flex" title="Fechar" id="close-desc" type="button"><i class="close-desc-icon fas fa-caret-left fa-2x"></i></button>
@@ -79,6 +79,7 @@
         </section>
     <!-- </main> -->
     <script src="/src/main.js" defer></script>
-    <script src="/src/script.js" defer></script>
+    <script type="module" src="/src/script.js" defer></script>
+    <!-- <script type="module" src="/src/style.js" defer></script> -->
 </body>
 </html>
