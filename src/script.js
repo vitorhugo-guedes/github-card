@@ -28,28 +28,28 @@ card.addEventListener('mouseover', ()=>{
     addClass('open-desc-active', openDescBtn);
     removeClass('hide', openDescIcon);
 
-    removeClass('border-radius-right', card);
+    // removeClass('border-radius-right', card);
 })
 openDescBtn.addEventListener('mouseover', ()=>{
     addClass('open-desc-active', openDescBtn);
     removeClass('hide', openDescIcon);
 
-    removeClass('border-radius-right', card);
+    // removeClass('border-radius-right', card);
 })
 // hide aside button
 card.addEventListener('mouseout', ()=>{
     addClass('hide', openDescIcon);
     removeClass('open-desc-active', openDescBtn);
 
-    if(desc.classList.contains('hide'))
-        addClass('border-radius-right', card);
+    // if(desc.classList.contains('hide'))
+    //     addClass('border-radius-right', card);
 })
 openDescBtn.addEventListener('mouseout', ()=>{
     addClass('hide', openDescIcon);
     removeClass('open-desc-active', openDescBtn);
     
-    if(desc.classList.contains('hide'))
-        addClass('border-radius-right', card);
+    // if(desc.classList.contains('hide'))
+    //     addClass('border-radius-right', card);
 })
 
 // open description
@@ -66,6 +66,8 @@ closeDescBtn.addEventListener('click', ()=>{
 
     removeClass('hide', openDescBtn);
     removeClass('open-desc-active', openDescBtn);
+    
+    // addClass('border-radius-right', card);
 })
 
 // dark mode
