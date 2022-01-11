@@ -63,7 +63,7 @@
 }
 /* box-shadow: 0 4px 2px -2px gray; */
 .shadow-bottom{
-    box-shadow: 0 4px 4px -4px gray;
+    box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.3);
 }
 .hide{
     display: none;
