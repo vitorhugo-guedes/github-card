@@ -40,7 +40,7 @@ O projeto é um card que possui dark mode salvo no localStorage e uma parte a ma
 
 ## Features
 
-- [ ] Responsivo
+- [x] Responsivo
 - [x] Dark/Light Mode
 - [ ] Animações
 
